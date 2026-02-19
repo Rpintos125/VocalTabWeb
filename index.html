@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocalTab - Cancionero Avanzado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="nav-group">
+                <button class="btn-pill">NEW</button>
+                <button class="btn-pill">OPEN</button>
+                <button class="btn-pill">SAVE</button>
+            </div>
+            <div class="nav-divider"></div>
+            <div class="nav-group">
+                <button class="btn-pill active-green">ARMONÍA</button>
+                <button class="btn-pill">MELODÍA</button>
+            </div>
+        </div>
+
+        <div class="nav-center">
+            <button class="btn-edit-mode">MODO EDICIÓN</button>
+        </div>
+
+        <div class="nav-right">
+            <div class="control-unit">
+                <span class="nav-label">TRASPONER</span>
+                <div class="stepper">
+                    <button class="step-btn">-</button>
+                    <span class="step-value">0</span>
+                    <button class="step-btn">+</button>
+                </div>
+            </div>
+
+            <div class="control-unit">
+                <span class="nav-label">SCROLL</span>
+                <div class="stepper">
+                    <button class="step-btn">-</button>
+                    <span class="step-value">1x</span>
+                    <button class="step-btn">+</button>
+                </div>
+            </div>
+
+            <div class="control-unit">
+                <span class="nav-label">ZOOM</span>
+                <div class="stepper">
+                    <button class="step-btn">-</button>
+                    <span class="step-value">100%</span>
+                    <button class="step-btn">+</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="song-header">
+        <h1 contenteditable="false" data-placeholder="TÍTULO DE LA CANCIÓN"></h1>
+        <h2 contenteditable="false" data-placeholder="Artista / Autor"></h2>
+    </header>
+
+    <main id="main-canvas">
+        <div class="music-line">
+            <div class="word-group">
+                <span class="chord-layer" contenteditable="false" data-placeholder="Acorde"></span>
+                <span class="lyric-layer" contenteditable="false" data-placeholder="Letra"></span>
+                <span class="melody-layer" contenteditable="false" data-placeholder="Nota"></span>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bottom-footer">
+        
+        <section id="chord-pads-container">
+            </section>
+        
+        <div class="piano-wrapper">
+            <div class="piano-container" id="piano-scroll">
+                </div>
+        </div>
+
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
